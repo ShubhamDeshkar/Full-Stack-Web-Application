@@ -1,0 +1,14 @@
+.button {
+	font-size: 30px;
+	background-color: coral;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 10px;
+	margin-top: 2%;
+}
+
+.reset {
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+}
