@@ -19,17 +19,20 @@ class HeaderComponent extends Component {
 							// eslint-disable-next-line react/jsx-no-target-blank
 							target="_blank"
 						>
-							My GitHub
+							GitHub
 						</a>
+						<Link to="/" className="navbar-brand">
+							RemindLy
+						</Link>
 					</div>
 					<ul className="navbar-nav">
-						{isUserLoggedIn && (
+						{/* {isUserLoggedIn && (
 							<li>
 								<Link className="nav-link" to="/welcome/shubham">
 									Home
 								</Link>
 							</li>
-						)}
+						)} */}
 						{isUserLoggedIn && (
 							<li>
 								<Link className="nav-link" to="/todos">

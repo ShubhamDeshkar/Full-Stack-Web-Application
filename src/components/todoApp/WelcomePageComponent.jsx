@@ -19,7 +19,7 @@ export default class WelcomePageComponent extends Component {
 		return (
 			<div>
 				<h1 className="display-4 text-center mb-4">
-					Hello, {this.props.match.params.name}!<br /> Welcome to Todos App!
+					Hello, {this.props.match.params.name}!<br /> Welcome to RemindLy!
 				</h1>
 				<div className="container">
 					<div className="container" style={{ fontSize: 20 }}>

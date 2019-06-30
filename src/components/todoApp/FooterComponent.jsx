@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class FooterComponent extends Component {
 	render() {
 		return (
-			<footer className="footer" style={{ height: 55, position: "absolute" }}>
+			<footer className="footer" style={{ height: 55, position: "fixed" }}>
 				<span className="text-muted">
 					All rights reserved 2019 &#169; ShubhamDeshkar
 					<div>
