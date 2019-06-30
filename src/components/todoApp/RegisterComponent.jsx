@@ -11,7 +11,7 @@ class RegisterComponent extends Component {
 					<input
 						style={{
 							marginTop: 5,
-							width: 150,
+							width: 175,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -19,13 +19,13 @@ class RegisterComponent extends Component {
 							marginRight: 3
 						}}
 						type="text"
-						name="email"
+						name="firstName"
 						placeholder="First Name"
 					/>
 					<input
 						style={{
 							marginTop: 5,
-							width: 150,
+							width: 175,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -33,14 +33,14 @@ class RegisterComponent extends Component {
 							marginLeft: 3
 						}}
 						type="text"
-						name="email"
+						name="lastName"
 						placeholder="Last Name"
 					/>{" "}
 					<br />
 					<input
 						style={{
 							marginTop: 5,
-							width: 306,
+							width: 356,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -54,7 +54,7 @@ class RegisterComponent extends Component {
 					<input
 						style={{
 							marginTop: 5,
-							width: 306,
+							width: 356,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -68,7 +68,7 @@ class RegisterComponent extends Component {
 					<input
 						style={{
 							marginTop: 5,
-							width: 306,
+							width: 356,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -80,7 +80,7 @@ class RegisterComponent extends Component {
 					/>{" "}
 					<br />
 					<button
-						style={{ width: 306, fontSize: 18 }}
+						style={{ width: 356, fontSize: 18 }}
 						className="btn btn-success mt-3"
 					>
 						Sign up
