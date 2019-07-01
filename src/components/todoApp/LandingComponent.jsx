@@ -5,7 +5,7 @@ class LandingPage extends Component {
 	render() {
 		return (
 			<>
-				<h1 className="display-3 text-center mb-4">Welcome to RemindLy!</h1>
+				<h1 className="display-3 text-center mb-4">Welcome to Remind.ly!</h1>
 				<h2
 					className="display-5 text-center mb-4"
 					style={{ fontWeight: "normal" }}

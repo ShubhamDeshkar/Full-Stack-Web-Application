@@ -22,7 +22,7 @@ class HeaderComponent extends Component {
 							GitHub
 						</a>
 						<Link to="/" className="navbar-brand">
-							RemindLy
+							Remind.ly
 						</Link>
 					</div>
 					<ul className="navbar-nav">

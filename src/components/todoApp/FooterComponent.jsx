@@ -5,7 +5,7 @@ export default class FooterComponent extends Component {
 		return (
 			<footer className="footer" style={{ height: 55, position: "fixed" }}>
 				<span className="text-muted">
-					All rights reserved 2019 &#169; ShubhamDeshkar
+					Copyright &#169; 2019 Shubham Deshkar. All rights reserved
 					<div>
 						Icons made by{" "}
 						<a
