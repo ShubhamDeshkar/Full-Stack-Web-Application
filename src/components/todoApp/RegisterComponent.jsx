@@ -2,11 +2,25 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class RegisterComponent extends Component {
+	constructor() {
+		super();
+		this.state = {};
+
+		this.handleKeyPress = this.handleKeyPress.bind(this);
+	}
+
+	handleKeyPress(event) {
+		console.log(event.keyCode);
+		if (event.keyCode === 13) {
+			console.log("Enter key pressed");
+		}
+	}
+
 	render() {
 		return (
 			<>
 				<h1 className="display-4 text-center mb-4">We are glad you chose us</h1>
-				<div className="container">
+				<div className="container" onKeyUp={this.handleKeyPress}>
 					<h4 style={{ fontWeight: "normal", marginTop: 50 }}>Register here</h4>
 					<input
 						style={{

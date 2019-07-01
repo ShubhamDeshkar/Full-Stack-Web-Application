@@ -14,6 +14,22 @@ export default class LoginComponent extends Component {
 
 		this.handleChange = this.handleChange.bind(this);
 		this.handleLoginClick = this.handleLoginClick.bind(this);
+		this.handleKeyPress = this.handleKeyPress.bind(this);
+	}
+
+	// var input = document.getElementById("myInput");
+	// input.addEventListener("keyup", function(event) {
+	//   if (event.keyCode === 13) {
+	//    event.preventDefault();
+	//    document.getElementById("myBtn").click();
+	//   }
+	// });
+
+	handleKeyPress(event) {
+		console.log(event.keyCode);
+		if (event.keyCode === 13) {
+			this.handleLoginClick();
+		}
 	}
 
 	handleLoginClick() {
@@ -34,23 +50,6 @@ export default class LoginComponent extends Component {
 					hasLoginFailed: true
 				});
 			});
-
-		// if (this.state.username === "shubham" && this.state.password === "2307") {
-		// 	AuthenticationService.registerSuccessfulLogin(
-		// 		this.state.username,
-		// 		this.state.password
-		// 	);
-		// 	this.props.history.push(`/welcome/${this.state.username}`);
-		// 	this.setState({
-		// 		hasLoginFailed: false,
-		// 		showSuccessMessage: true
-		// 	});
-		// } else {
-		// 	this.setState({
-		// 		hasLoginFailed: true,
-		// 		showSuccessMessage: false
-		// 	});
-		// }
 	}
 
 	handleChange(event) {
@@ -63,7 +62,11 @@ export default class LoginComponent extends Component {
 		return (
 			<div>
 				<h1 className="display-4 text-center mb-4">Glad to see you again</h1>
-				<div className="container" style={{ marginTop: 50 }}>
+				<div
+					className="container"
+					style={{ marginTop: 50 }}
+					onKeyUp={this.handleKeyPress}
+				>
 					<h4 style={{ fontWeight: "normal", marginTop: 50 }}>Login</h4>
 					<input
 						style={{
