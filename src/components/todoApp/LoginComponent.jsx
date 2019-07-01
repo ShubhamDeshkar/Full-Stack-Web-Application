@@ -64,10 +64,11 @@ export default class LoginComponent extends Component {
 			<div>
 				<h1 className="display-4 text-center mb-4">Glad to see you again</h1>
 				<div className="container" style={{ marginTop: 50 }}>
+					<h4 style={{ fontWeight: "normal", marginTop: 50 }}>Login</h4>
 					<input
 						style={{
 							marginTop: 10,
-							width: 300,
+							width: 356,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -83,7 +84,7 @@ export default class LoginComponent extends Component {
 					<input
 						style={{
 							marginTop: 10,
-							width: 300,
+							width: 356,
 							height: 40,
 							border: "none",
 							borderRadius: 4,
@@ -96,7 +97,7 @@ export default class LoginComponent extends Component {
 					/>{" "}
 					<br />
 					<button
-						style={{ width: 300, fontSize: 18 }}
+						style={{ width: 356, fontSize: 18 }}
 						className="btn btn-success mt-3"
 						onClick={this.handleLoginClick}
 					>

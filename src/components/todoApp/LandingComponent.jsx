@@ -35,7 +35,7 @@ class LandingPage extends Component {
 						</button>
 					</Link>
 				</div>
-				<div style={{ fontSize: 25 }}> OR </div>
+				<div style={{ fontSize: 22 }}> OR </div>
 			</>
 		);
 	}
