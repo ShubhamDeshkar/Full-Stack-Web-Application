@@ -73,6 +73,7 @@ export default class LoginComponent extends Component {
 							borderRadius: 4,
 							paddingLeft: 10
 						}}
+						autoFocus
 						type="text"
 						name="username"
 						placeholder="Username"

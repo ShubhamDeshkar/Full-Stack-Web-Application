@@ -18,6 +18,7 @@ class RegisterComponent extends Component {
 							paddingLeft: 10,
 							marginRight: 3
 						}}
+						autoFocus
 						type="text"
 						name="firstName"
 						placeholder="First Name"
