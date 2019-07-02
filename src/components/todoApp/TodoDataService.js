@@ -10,29 +10,19 @@ class TodoDataService {
 	}
 
 	deleteTodos(name, id) {
-		return axios.delete(
-			`https://stormy-garden-35152.herokuapp.com/users/${name}/todos/${id}`
-		);
+		return axios.delete(`${API_URL}/users/${name}/todos/${id}`);
 	}
 
 	retrieveTodo(name, id) {
-		return axios.get(
-			`https://stormy-garden-35152.herokuapp.com/users/${name}/todos/${id}`
-		);
+		return axios.get(`${API_URL}/users/${name}/todos/${id}`);
 	}
 
 	updateTodo(name, id, todo) {
-		return axios.put(
-			`https://stormy-garden-35152.herokuapp.com/users/${name}/todos/${id}`,
-			todo
-		);
+		return axios.put(`${API_URL}/users/${name}/todos/${id}`, todo);
 	}
 
 	createTodo(name, todo) {
-		return axios.put(
-			`https://stormy-garden-35152.herokuapp.com/users/${name}/todos/`,
-			todo
-		);
+		return axios.put(`${API_URL}/users/${name}/todos/`, todo);
 	}
 }
 
