@@ -3,7 +3,7 @@ import { API_URL } from "./Constants";
 
 class AuthenticationService {
 	executeBasicAuthenticationService(username, password) {
-		return axios.get(`https://stormy-garden-35152.herokuapp.com/basic-auth`, {
+		return axios.get(`${API_URL}/basic-auth`, {
 			headers: {
 				authorization: this.createBasicAuthHeader(username, password)
 			}

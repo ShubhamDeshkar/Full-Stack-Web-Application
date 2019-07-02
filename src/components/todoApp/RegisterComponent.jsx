@@ -15,7 +15,7 @@ class RegisterComponent extends Component {
 		};
 
 		this.handleChange = this.handleChange.bind(this);
-		this.handleKeyPress = this.handleKeyUp.bind(this);
+		this.handleKeyUp = this.handleKeyUp.bind(this);
 		this.handleOnClick = this.handleOnClick.bind(this);
 	}
 
