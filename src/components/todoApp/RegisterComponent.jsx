@@ -138,7 +138,7 @@ class RegisterComponent extends Component {
 						Sign up
 					</button>
 					<div style={{ color: "rgb(128, 128, 128)", marginTop: 4 }}>
-						Have an account? <Link to="/login">Sign in</Link>{" "}
+						Have an account? <Link to="/login">Sign in</Link>
 					</div>
 					{this.state.isInvalid && (
 						<div className="alert alert-danger mt-2">

@@ -64,7 +64,7 @@ class TodoComponent extends Component {
 		let targetDate = this.state.targetDate;
 
 		return (
-			<div className="container" style={{ width: 800 }}>
+			<div className="container" style={{ width: 800, minHeight: "100vh" }}>
 				<h1 className="display-4 text-center">Edit your Todo here...</h1>
 				<Formik
 					initialValues={{ description, targetDate }}
