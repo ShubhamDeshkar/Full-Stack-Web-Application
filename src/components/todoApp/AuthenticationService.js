@@ -2,12 +2,8 @@ import axios from "axios";
 import { API_URL } from "./Constants";
 
 class AuthenticationService {
-	createBasicAuthHeader(username, password) {
-		return "Basic " + window.btoa(username + ":" + password);
-	}
-
 	executeBasicAuthenticationService(username, password) {
-		return axios.get(`${API_URL}/basic-auth`, {
+		return axios.get(`https://stormy-garden-35152.herokuapp.com/basic-auth`, {
 			headers: {
 				authorization: this.createBasicAuthHeader(username, password)
 			}
@@ -17,6 +13,10 @@ class AuthenticationService {
 	registerSuccessfulLogin(username, password) {
 		sessionStorage.setItem("authenticatedUser", username);
 		this.setupAxiosInterceptor(this.createBasicAuthHeader(username, password));
+	}
+
+	createBasicAuthHeader(username, password) {
+		return "Basic " + window.btoa(username + ":" + password);
 	}
 
 	logout() {
