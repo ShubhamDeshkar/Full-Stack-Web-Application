@@ -17,6 +17,7 @@ class RegisterComponent extends Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleKeyUp = this.handleKeyUp.bind(this);
 		this.handleOnClick = this.handleOnClick.bind(this);
+		this.handleValidation = this.handleValidation.bind(this);
 	}
 
 	handleChange(event) {
@@ -26,7 +27,36 @@ class RegisterComponent extends Component {
 		});
 	}
 
+	handleValidation(event) {
+		if (this.state.firstName.length < 2) {
+			this.setState({
+				errorMessage: "First Name cannot be less than 2 chracters"
+			});
+			return true;
+		}
+		if (this.state.lastName.length < 2) {
+			this.setState({
+				errorMessage: "Last Name cannot be less than 2 characters"
+			});
+			return true;
+		}
+		if (this.state.password.length < 8) {
+			this.setState({
+				errorMessage: "Password cannot be less than 8 characters"
+			});
+			return true;
+		}
+		if (this.state.password !== this.state.confirmPassword) {
+			this.setState({
+				errorMessage: "Passwords do not match"
+			});
+			return true;
+		}
+		return false;
+	}
+
 	handleOnClick(event) {
+		console.log("onClick called");
 		console.log(event);
 	}
 
@@ -34,7 +64,14 @@ class RegisterComponent extends Component {
 		console.log(event.keyCode);
 		if (event.keyCode === 13) {
 			console.log("Enter key pressed");
-			this.handleOnClick(event);
+			this.setState(
+				{
+					isInvalid: this.handleValidation(event)
+				},
+				() => {
+					!this.state.isInvalid && this.handleOnClick(event);
+				}
+			);
 		}
 	}
 
@@ -133,7 +170,7 @@ class RegisterComponent extends Component {
 					<button
 						style={{ width: 356, fontSize: 18 }}
 						className="btn btn-success mt-3"
-						onClick={this.handleOnClick}
+						onClick={this.handleValidation}
 					>
 						Sign up
 					</button>
