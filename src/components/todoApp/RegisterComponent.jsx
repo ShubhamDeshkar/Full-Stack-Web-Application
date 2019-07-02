@@ -27,7 +27,8 @@ class RegisterComponent extends Component {
 		});
 	}
 
-	handleValidation(event) {
+	handleValidation() {
+		console.log("validation called");
 		if (this.state.firstName.length < 2) {
 			this.setState({
 				errorMessage: "First Name cannot be less than 2 chracters"
@@ -57,7 +58,9 @@ class RegisterComponent extends Component {
 
 	handleOnClick(event) {
 		console.log("onClick called");
-		console.log(event);
+		this.handleValidation();
+		console.log("Validation passed");
+		console.log(this.state);
 	}
 
 	handleKeyUp(event) {
@@ -170,7 +173,7 @@ class RegisterComponent extends Component {
 					<button
 						style={{ width: 356, fontSize: 18 }}
 						className="btn btn-success mt-3"
-						onClick={this.handleValidation}
+						onClick={this.handleOnClick}
 					>
 						Sign up
 					</button>
