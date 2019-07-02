@@ -6,7 +6,10 @@ import "./bootstrap.css";
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
+			<div
+				className="App"
+				style={{ minHeight: "100vh", backgroundColor: "aliceblue" }}
+			>
 				<TodoApp />
 			</div>
 		);

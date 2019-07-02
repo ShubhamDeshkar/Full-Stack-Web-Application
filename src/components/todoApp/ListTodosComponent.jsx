@@ -55,7 +55,7 @@ export default class ListTodosComponent extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{ minHeight: "100vh" }}>
 				<h1 className="display-4 text-center mb-5">Manage your Todos here</h1>
 				{this.state.message && (
 					<div className="alert alert-success">{this.state.message}</div>
@@ -67,7 +67,7 @@ export default class ListTodosComponent extends Component {
 				>
 					Add New
 				</button>
-				<div className="container">
+				<div className="container" style={{ overflow: "auto" }}>
 					<table className="table">
 						<thead>
 							<tr>

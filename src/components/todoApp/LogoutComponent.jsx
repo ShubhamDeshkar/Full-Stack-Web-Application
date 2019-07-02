@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class LogoutComponent extends Component {
 	render() {
 		return (
-			<div>
+			<div style={{ minHeight: "100vh" }}>
 				<h1 className="display-4 text-center mb-4">
 					You are successfully logged out!
 				</h1>

@@ -3,9 +3,10 @@ import React, { Component } from "react";
 export default class FooterComponent extends Component {
 	render() {
 		return (
-			<footer className="footer" style={{ height: 55, position: "fixed" }}>
+			<footer className="footer" style={{ height: 55, position: "relative" }}>
 				<span className="text-muted">
-					Copyright &#169; 2019 Shubham Deshkar. All rights reserved
+					Copyright &copy; {new Date().getFullYear()} Shubham Deshkar. All
+					rights reserved
 					<div>
 						Icons made by{" "}
 						<a

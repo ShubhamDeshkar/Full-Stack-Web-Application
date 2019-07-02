@@ -17,9 +17,9 @@ export default class WelcomePageComponent extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{ minHeight: "100vh" }}>
 				<h1 className="display-4 text-center mb-4">
-					Hello, {this.props.match.params.name}!<br /> Welcome to RemindLy!
+					Hello, {this.props.match.params.name}!<br /> Welcome to Remind.ly!
 				</h1>
 				<div className="container">
 					<div className="container" style={{ fontSize: 20 }}>

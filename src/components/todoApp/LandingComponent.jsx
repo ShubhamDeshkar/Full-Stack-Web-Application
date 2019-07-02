@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class LandingPage extends Component {
 	render() {
 		return (
-			<>
+			<div style={{ minHeight: "100vh" }}>
 				<h1 className="display-3 text-center mb-4">Welcome to Remind.ly!</h1>
 				<h2
 					className="display-5 text-center mb-4"
@@ -36,7 +36,7 @@ class LandingPage extends Component {
 					</Link>
 				</div>
 				<div style={{ fontSize: 22 }}> OR </div>
-			</>
+			</div>
 		);
 	}
 }

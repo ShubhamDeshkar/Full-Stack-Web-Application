@@ -17,14 +17,6 @@ export default class LoginComponent extends Component {
 		this.handleKeyPress = this.handleKeyPress.bind(this);
 	}
 
-	// var input = document.getElementById("myInput");
-	// input.addEventListener("keyup", function(event) {
-	//   if (event.keyCode === 13) {
-	//    event.preventDefault();
-	//    document.getElementById("myBtn").click();
-	//   }
-	// });
-
 	handleKeyPress(event) {
 		console.log(event.keyCode);
 		if (event.keyCode === 13) {
@@ -60,7 +52,7 @@ export default class LoginComponent extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={{ minHeight: "100vh" }}>
 				<h1 className="display-4 text-center mb-4">Glad to see you again</h1>
 				<div
 					className="container"
@@ -78,6 +70,7 @@ export default class LoginComponent extends Component {
 							paddingLeft: 10
 						}}
 						autoFocus
+						required
 						type="text"
 						name="username"
 						placeholder="Username"
@@ -93,6 +86,7 @@ export default class LoginComponent extends Component {
 							borderRadius: 4,
 							paddingLeft: 10
 						}}
+						required
 						type="password"
 						name="password"
 						placeholder="Password"
