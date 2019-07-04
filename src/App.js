@@ -4,8 +4,9 @@ import "./App.css";
 import "./bootstrap.css";
 
 var http = require("http");
-setInterval(function() {
+setInterval(function () {
 	http.get("http://<your app name>.herokuapp.com");
+	console.log('ping!')
 }, 300000);
 
 class App extends Component {

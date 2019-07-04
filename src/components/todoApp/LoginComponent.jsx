@@ -8,8 +8,7 @@ export default class LoginComponent extends Component {
 		this.state = {
 			username: "",
 			password: "",
-			hasLoginFailed: false,
-			showSuccessMessage: false
+			hasLoginFailed: false
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -38,9 +37,18 @@ export default class LoginComponent extends Component {
 				this.props.history.push(`/welcome/${this.state.username}`);
 			})
 			.catch(error => {
-				this.setState({
-					hasLoginFailed: true
-				});
+				this.setState(
+					{
+						hasLoginFailed: true
+					},
+					() => {
+						setTimeout(() => {
+							this.setState({
+								hasLoginFailed: false
+							});
+						}, 2500);
+					}
+				);
 			});
 	}
 
