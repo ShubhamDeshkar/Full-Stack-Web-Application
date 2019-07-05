@@ -5,7 +5,7 @@ import "./bootstrap.css";
 
 var http = require("http");
 setInterval(function () {
-	http.get("http://<your app name>.herokuapp.com");
+	http.get(" https://stormy-garden-35152.herokuapp.com/");
 	console.log('ping!')
 }, 300000);
 

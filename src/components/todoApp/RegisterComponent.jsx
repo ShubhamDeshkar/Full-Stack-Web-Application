@@ -69,7 +69,7 @@ class RegisterComponent extends Component {
 			console.log("Enter key pressed");
 			this.setState(
 				{
-					isInvalid: this.handleValidation(event)
+					isInvalid: this.handleValidation()
 				},
 				() => {
 					!this.state.isInvalid && this.handleOnClick(event);
