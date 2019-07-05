@@ -38,9 +38,18 @@ export default class ListTodosComponent extends Component {
 	deleteTodo(id) {
 		let name = AuthenticationService.getUser();
 		TodoDataService.deleteTodos(name, id).then(response => {
-			this.setState({
-				message: "Successfully deleted " + id.toString()
-			});
+			this.setState(
+				{
+					message: "Successfully deleted"
+				},
+				() => {
+					setTimeout(() => {
+						this.setState({
+							message: ""
+						});
+					}, 2500);
+				}
+			);
 			this.refreshTodos();
 		});
 	}
@@ -57,17 +66,17 @@ export default class ListTodosComponent extends Component {
 		return (
 			<div style={{ minHeight: "100vh" }}>
 				<h1 className="display-4 text-center mb-5">Manage your Todos here</h1>
-				{this.state.message && (
-					<div className="alert alert-success">{this.state.message}</div>
-				)}
-				<button
-					className="btn btn-success mb-3"
-					style={{ width: 250 }}
-					onClick={() => this.addNewTodo()}
-				>
-					Add New
-				</button>
 				<div className="container" style={{ overflow: "auto" }}>
+					{this.state.message && (
+						<div className="alert alert-success">{this.state.message}</div>
+					)}
+					<button
+						className="btn btn-success mb-3"
+						style={{ width: 250 }}
+						onClick={() => this.addNewTodo()}
+					>
+						Add New
+					</button>
 					<table className="table">
 						<thead>
 							<tr>
