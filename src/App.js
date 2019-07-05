@@ -5,7 +5,7 @@ import "./bootstrap.css";
 
 var http = require("http");
 setInterval(function () {
-	http.get(" https://stormy-garden-35152.herokuapp.com/jpa/users");
+	http.get(" https://stormy-garden-35152.herokuapp.com/jpa/users/");
 	console.log('ping!')
 }, 300000);
 
