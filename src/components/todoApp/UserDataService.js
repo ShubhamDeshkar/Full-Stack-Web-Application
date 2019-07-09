@@ -3,7 +3,7 @@ import { JPA_API_URL } from "./Constants";
 
 class UserDataService {
 	createUser(user) {
-		return axios.put(`${JPA_API_URL}/users/new`, user);
+		return axios.post(`${JPA_API_URL}/users/new`, user);
 	}
 
 	// getUser(user)

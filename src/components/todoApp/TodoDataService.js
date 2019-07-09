@@ -19,7 +19,7 @@ class TodoDataService {
 	}
 
 	createTodo(name, todo) {
-		return axios.put(`${JPA_API_URL}/users/${name}/todos/`, todo);
+		return axios.post(`${JPA_API_URL}/users/${name}/todos/`, todo);
 	}
 }
 

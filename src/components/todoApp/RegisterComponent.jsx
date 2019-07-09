@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import UserDataService from "./UserDataService";
 
 class RegisterComponent extends Component {
 	constructor() {
@@ -11,6 +12,7 @@ class RegisterComponent extends Component {
 			password: "",
 			confirmPassword: "",
 			isInvalid: false,
+			valueEntered: false,
 			errorMessage: ""
 		};
 
@@ -23,7 +25,8 @@ class RegisterComponent extends Component {
 	handleChange(event) {
 		console.log(event.target.name + ": " + event.target.value);
 		this.setState({
-			[event.target.name]: event.target.value
+			[event.target.name]: event.target.value,
+			valueEntered: true
 		});
 	}
 
@@ -58,8 +61,24 @@ class RegisterComponent extends Component {
 
 	handleOnClick(event) {
 		console.log("onClick called");
-		this.handleValidation();
-		console.log("Validation passed");
+		if (this.state.valueEntered && !this.state.isInvalid) {
+			console.log("Validation passed");
+			UserDataService.createUser({
+				firstName: this.state.firstName,
+				lastName: this.state.lastName,
+				email: this.state.email,
+				password: this.state.password
+			})
+				.then(response => {
+					this.props.history.push(`/welcome/${this.state.firstName}`);
+				})
+				.catch(response => {
+					console.log(response);
+				});
+		} else {
+			this.handleValidation();
+			this.handleOnClick(event);
+		}
 		console.log(this.state);
 	}
 
